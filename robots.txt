@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sah411wy.github.io/appm-i-game-com-cn-2/sitemap.xml
