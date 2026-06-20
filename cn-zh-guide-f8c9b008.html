@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>炸金花 · 资料索引与玩法概要</title>
+  <style>
+    /* 极简留白 · 窄正文宽度 · 清晰标题层级 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #f9fafc;
+      color: #1e2a3a;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      padding: 1.5rem 1rem 3rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .page {
+      max-width: 720px;
+      width: 100%;
+    }
+    /* hero 区 */
+    .hero {
+      margin: 2.4rem 0 3rem;
+      text-align: left;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: #0f1a2b;
+      margin-bottom: 0.75rem;
+    }
+    .hero .sub {
+      font-size: 1.05rem;
+      color: #5b677a;
+      max-width: 600px;
+      border-left: 3px solid #b3c2d4;
+      padding-left: 1rem;
+      margin-top: 0.25rem;
+    }
+    /* 通用 section */
+    section {
+      margin-bottom: 3.2rem;
+    }
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: #13202e;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid #e3e8f0;
+    }
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1f3143;
+      margin: 1.4rem 0 0.5rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      color: #2a384a;
+    }
+    .text-sm {
+      font-size: 0.925rem;
+      color: #3f4e64;
+    }
+    .text-muted {
+      color: #5d6d84;
+    }
+    a {
+      color: #1f5090;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    a:hover {
+      border-bottom-color: #1f5090;
+    }
+    /* 优势卡片 —— 极简列表样式 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem 1.5rem;
+      margin: 1.5rem 0 0.8rem;
+    }
+    .feature-item {
+      background: #ffffff;
+      padding: 0.9rem 1.1rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      border: 1px solid #eef2f7;
+    }
+    .feature-item strong {
+      display: block;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #14273d;
+      margin-bottom: 0.25rem;
+    }
+    .feature-item span {
+      font-size: 0.88rem;
+      color: #4d5d75;
+    }
+    /* 说明区 —— 窄排版，信息密度 */
+    .info-block {
+      background: #ffffff;
+      padding: 1.4rem 1.6rem;
+      border-radius: 10px;
+      border: 1px solid #e6ecf4;
+      margin-bottom: 1rem;
+    }
+    .info-block p:last-child {
+      margin-bottom: 0;
+    }
+    /* FAQ 摘要 */
+    .faq-list {
+      list-style: none;
+      padding: 0;
+    }
+    .faq-list li {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid #e7edf5;
+    }
+    .faq-list li:last-child {
+      border-bottom: none;
+    }
+    .faq-q {
+      font-weight: 600;
+      color: #132530;
+      margin-bottom: 0.25rem;
+    }
+    .faq-a {
+      font-size: 0.92rem;
+      color: #3f536b;
+    }
+    /* 底部链接 */
+    .footer-links {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #dfe6ef;
+      font-size: 0.9rem;
+      color: #5b6d83;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem 1.2rem;
+    }
+    .footer-links a {
+      color: #2a4a72;
+    }
+    .footer-note {
+      margin-top: 0.8rem;
+      font-size: 0.8rem;
+      color: #7a8a9e;
+    }
+    /* 响应式细节 */
+    @media (max-width: 550px) {
+      body {
+        padding: 1rem 0.75rem 2.5rem;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+      }
+      .info-block {
+        padding: 1rem 1.2rem;
+      }
+      .footer-links {
+        flex-direction: column;
+        gap: 0.4rem 0;
+      }
+    }
+    @media (max-width: 420px) {
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero -->
+  <header class="hero">
+    <h1>炸金花<br>资料梳理与玩法索引</h1>
+    <div class="sub">
+      围绕规则、变种、策略与信息聚合，为爱好者提供一份结构化的参考档案。
+    </div>
+  </header>
+
+  <!-- 优势区：为什么整理 → 聚焦信息价值 -->
+  <section>
+    <h2>为何需要一份结构化索引</h2>
+    <p>在扑克类游戏中，<a href="https://cn-zh-zhajinhua.com">炸金花</a>流传广泛，但公开资料常常零散、重复甚至相互矛盾。从牌型概率到地方性规则差异，从线下娱乐到线上对局环境，碎片化的信息容易造成理解偏差。本页面尝试将常见知识点按逻辑分组，方便快速检索与对照。</p>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <strong>规则分层</strong>
+        <span>基础牌型、比牌顺序、常见变体（闷牌、喜钱、轮庄）逐条拆解。</span>
+      </div>
+      <div class="feature-item">
+        <strong>概率参考</strong>
+        <span>豹子、同花顺、金花、顺子等出现频率与实战推算依据。</span>
+      </div>
+      <div class="feature-item">
+        <strong>术语整理</strong>
+        <span>“蒙牌”“比牌”“暗牌”“喜牌”等说法统一释义。</span>
+      </div>
+      <div class="feature-item">
+        <strong>场景区分</strong>
+        <span>朋友局、比赛局、线上平台之间的规则微调与注意事项。</span>
+      </div>
+    </div>
+    <p class="text-sm text-muted">以上条目均来自公开资料与玩家社群经验汇总，不做绝对性结论，仅作索引参考。</p>
+  </section>
+
+  <!-- 说明区：更具体的资料切入角度 -->
+  <section>
+    <h2>从牌张到局面 · 信息拆解</h2>
+    <div class="info-block">
+      <p>一副去掉大小王的扑克牌，每人三张，比牌型大小——这是最简框架。但实际对局中往往叠加若干附加规则：例如“235 可吃豹子”是否适用、同花顺是否允许 A23 作为顺子、以及“喜钱”的触发条件。不同地区的线下局可能执行不同惯例，因此索引的价值在于并列呈现多种说法，供玩家自行对照所属场景。</p>
+      <p>另外，在线上环境中，<a href="https://cn-zh-zhajinhua.com">炸金花</a>的随机算法、房间设置、限红与抽水机制也各有差异。建议玩家在参与前仔细阅读具体平台的规则说明，避免因默认经验而产生误解。</p>
+    </div>
+    <h3>常见信息盲区举例</h3>
+    <ul style="margin-left: 1.2rem; margin-bottom: 0.8rem; color: #2f4057;">
+      <li>“喜钱”是否计入总底池？不同社群定义不同。</li>
+      <li>轮庄与通吃局中，庄家特权与比牌顺序如何界定。</li>
+      <li>线上平台的“自动比牌”逻辑是否与线下一致。</li>
+    </ul>
+    <p class="text-sm">这些细节往往在即时对局中被忽略，提前查阅索引可以有效减少因规则模糊导致的争议。</p>
+  </section>
+
+  <!-- FAQ 摘要 -->
+  <section>
+    <h2>FAQ 摘要 · 高频问题简答</h2>
+    <ul class="faq-list">
+      <li>
+        <div class="faq-q">炸金花中豹子一定最大吗？</div>
+        <div class="faq-a">通常豹子（AAA 最大，222 最小）是最大牌型，但部分规则中“235 杂牌”可反杀豹子（仅限单挑且未加注到特定轮次），这一条并非通用，建议局前确认。</div>
+      </li>
+      <li>
+        <div class="faq-q">同花顺与金花的区别？</div>
+        <div class="faq-a">同花顺要求花色相同且点数连续（如 5♥6♥7♥），金花仅要求花色相同，点数不需要连续。同花顺大于金花，但小于豹子。</div>
+      </li>
+      <li>
+        <div class="faq-q">“闷牌”是什么意思？</div>
+        <div class="faq-a">不看牌直接下注称为“闷牌”，闷牌阶段下注额通常较低，看牌后加注额可能翻倍。不同房间对闷牌轮次有限制。</div>
+      </li>
+      <li>
+        <div class="faq-q">线上平台如何保证公平？</div>
+        <div class="faq-a">正规平台会公示随机洗牌算法与第三方验牌报告，但仍建议选择有明确资质说明的站点，并留意玩家评价。</div>
+      </li>
+    </ul>
+    <p class="text-sm" style="margin-top: 0.4rem;">更多问答与深度讨论，可参考 <a href="https://cn-zh-zhajinhua.com">炸金花</a> 资料库中的专题文章。</p>
+  </section>
+
+  <!-- 底部链接 -->
+  <footer class="footer-links">
+    <span>📚 信息索引 · 持续更新</span>
+    <a href="https://cn-zh-zhajinhua.com">炸金花</a>
+    <span>·</span>
+    <a href="https://cn-zh-zhajinhua.com" style="border-bottom:1px dashed #bcc9db;">炸金花</a>
+    <span>·</span>
+    <a href="https://cn-zh-zhajinhua.com" style="border-bottom:1px dashed #bcc9db;">炸金花</a>
+    <span>·</span>
+    <span>术语词典</span>
+    <span>·</span>
+    <span>社群讨论</span>
+    <div class="footer-note">
+      本页面仅作信息索引与资料整理，不构成任何形式的游戏引导或鼓励。对局请遵守当地法规与平台协议。
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
