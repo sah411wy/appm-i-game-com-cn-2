@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bet365 信息参考 · 知识指引</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fafaf9;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1f1f1f;
+            line-height: 1.65;
+            padding: 2rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 740px;
+            width: 100%;
+        }
+
+        /* 头部区域 — 极简标识 */
+        .hero {
+            margin: 3.2rem 0 2.8rem 0;
+            border-bottom: 1px solid #e4e4e7;
+            padding-bottom: 2rem;
+        }
+
+        .hero .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background: #eae8e4;
+            padding: 0.2rem 0.75rem;
+            border-radius: 20px;
+            color: #3b3b3b;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-weight: 520;
+            font-size: 2.2rem;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            color: #18181b;
+        }
+
+        .hero p {
+            margin-top: 1.2rem;
+            color: #52525b;
+            font-size: 1.05rem;
+            max-width: 600px;
+        }
+
+        /* 目录卡片网格 */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.6rem;
+            margin: 2.4rem 0;
+        }
+
+        .card-item {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.5rem 1.2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+            border: 1px solid #eaeaec;
+            transition: box-shadow 0.2s;
+        }
+
+        .card-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+        }
+
+        .card-item .num {
+            display: inline-block;
+            font-size: 0.7rem;
+            background: #f0efed;
+            padding: 0.1rem 0.6rem;
+            border-radius: 30px;
+            color: #3f3f46;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.05em;
+        }
+
+        .card-item h3 {
+            font-weight: 500;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #18181b;
+        }
+
+        .card-item p {
+            font-size: 0.92rem;
+            color: #52525b;
+        }
+
+        /* 说明区 — 窄阅读宽度 */
+        .explanatory {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2rem 2rem 2.2rem;
+            margin: 2.4rem 0;
+            border: 1px solid #eaeaec;
+        }
+
+        .explanatory h2 {
+            font-weight: 520;
+            font-size: 1.6rem;
+            margin-bottom: 1.4rem;
+            letter-spacing: -0.01em;
+            border-left: 4px solid #b0ab9c;
+            padding-left: 1rem;
+        }
+
+        .explanatory p {
+            margin-bottom: 1.2rem;
+            color: #3f3f46;
+        }
+
+        .explanatory .highlight-sentence {
+            background: #f5f4f1;
+            padding: 1.2rem 1.4rem;
+            border-radius: 14px;
+            margin: 1.6rem 0 0.4rem;
+            font-size: 1rem;
+        }
+
+        .explanatory .highlight-sentence a {
+            color: #1f1f1f;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            text-decoration-color: #b0ab9c;
+            font-weight: 470;
+        }
+
+        .explanatory .highlight-sentence a:hover {
+            text-decoration-color: #18181b;
+        }
+
+        /* 提示区 — 信息提示卡 */
+        .notice-area {
+            background: #ecebe7;
+            border-radius: 20px;
+            padding: 1.8rem;
+            margin: 2.4rem 0;
+        }
+
+        .notice-area .badge {
+            font-size: 0.7rem;
+            background: #d6d3cf;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            display: inline-block;
+            color: #2d2d2d;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.02em;
+        }
+
+        .notice-area h3 {
+            font-weight: 500;
+            font-size: 1.3rem;
+            margin-bottom: 0.6rem;
+        }
+
+        .notice-area p {
+            color: #3b3b3b;
+            margin-bottom: 0.6rem;
+        }
+
+        .notice-area ul {
+            list-style: none;
+            padding: 0.4rem 0;
+        }
+
+        .notice-area li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #cccbc7;
+            font-size: 0.95rem;
+            color: #2d2d2d;
+        }
+
+        .notice-area li:last-child {
+            border-bottom: none;
+        }
+
+        .notice-area li::before {
+            content: "· ";
+            color: #7c7a74;
+            font-weight: 700;
+        }
+
+        /* 相关信息区 — FAQ 摘要风格 */
+        .related-info {
+            margin: 2.8rem 0 2rem;
+        }
+
+        .related-info h2 {
+            font-weight: 520;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #18181b;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e2e1de;
+            padding: 1.1rem 0;
+        }
+
+        .faq-item:first-of-type {
+            border-top: 1px solid #e2e1de;
+        }
+
+        .faq-item .q {
+            font-weight: 470;
+            color: #1f1f1f;
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 1.02rem;
+        }
+
+        .faq-item .a {
+            color: #63635e;
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+
+        .related-footer-note {
+            font-size: 0.85rem;
+            color: #8c8a86;
+            margin-top: 2rem;
+            border-top: 1px solid #e5e3e0;
+            padding-top: 1.2rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .grid-cards {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .explanatory {
+                padding: 1.4rem;
+            }
+
+            .notice-area {
+                padding: 1.4rem;
+            }
+        }
+
+        @media (max-width: 440px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- hero / 页眉 -->
+        <header class="hero">
+            <span class="tag">知识入口 · 稳定索引</span>
+            <h1>bet365 信息参考与使用指引</h1>
+            <p>围绕平台的基本认知、常见疑问与访问方式，整理为清晰的信息入口。适合初次接触或希望快速查阅相关说明的用户。</p>
+        </header>
+
+        <!-- 卡片目录网格：四个核心板块 -->
+        <div class="grid-cards">
+            <div class="card-item">
+                <span class="num">01</span>
+                <h3>平台定位</h3>
+                <p>综合类在线服务平台，涵盖体育、娱乐等数字交互场景，面向多地区用户。</p>
+            </div>
+            <div class="card-item">
+                <span class="num">02</span>
+                <h3>访问方式</h3>
+                <p>通过主域名进入，部分区域可能需要遵循当地网络访问规则。</p>
+            </div>
+            <div class="card-item">
+                <span class="num">03</span>
+                <h3>功能概览</h3>
+                <p>提供实时数据、赛事信息、账户管理及基础客服支持等功能模块。</p>
+            </div>
+            <div class="card-item">
+                <span class="num">04</span>
+                <h3>注意事项</h3>
+                <p>建议用户了解当地相关法规，合理管理使用时间与账户安全。</p>
+            </div>
+        </div>
+
+        <!-- 说明区：从稳定入口和页面说明的角度展开 -->
+        <section class="explanatory">
+            <h2>关于这个页面</h2>
+            <p>
+                这是一个知识库式的信息索引页，不是官方站点，而是从使用说明与常识积累的角度，整理与 <strong>bet365</strong> 相关的基础信息。
+                很多时候，用户需要一个清晰、无干扰的参考页，以便快速定位到正确的服务页面。
+            </p>
+            <p>
+                平台的直接访问地址是 <a href="https://zhc-bet365.com">bet365</a>，该域名是当前较常用的入口之一。
+                页面内所有说明均基于公开可查的常见用户反馈与功能描述，不包含内部数据或非公开指引。
+            </p>
+            <p>
+                如果你是第一次接触，建议先浏览下面的提示区与 FAQ 摘要，获得大致的轮廓后再做进一步操作。
+            </p>
+            <div class="highlight-sentence">
+                ⚡ 你可以直接访问 <a href="https://zhc-bet365.com">bet365</a>，查看最新界面与功能。本页面仅提供背景说明与使用参考。
+            </div>
+        </section>
+
+        <!-- 提示区：注意、提醒、常识 -->
+        <div class="notice-area">
+            <span class="badge">留意 · TIPS</span>
+            <h3>使用前建议了解</h3>
+            <ul>
+                <li>部分地区可能需要对网络环境做相应调整，请遵守当地法律。</li>
+                <li>请保护个人账户信息，避免使用公共设备保存登录密码。</li>
+                <li>平台界面可能根据版本迭代有所调整，以实际显示为准。</li>
+                <li>如遇到访问问题，可先检查域名是否正确，或稍后重试。</li>
+            </ul>
+            <p style="margin-top: 0.8rem; font-size: 0.9rem; color: #575754;">
+                提示：本页内容仅供信息参考，不构成任何形式的推荐或引导。
+            </p>
+        </div>
+
+        <!-- 相关信息区 FAQ 摘要 -->
+        <section class="related-info">
+            <h2>常见疑问 · 摘要</h2>
+            <div class="faq-item">
+                <span class="q">bet365 是一个什么类型的平台？</span>
+                <span class="a">提供体育赛事观赏、数字娱乐等在线服务的综合性平台，运营多年，覆盖多个国家和地区。</span>
+            </div>
+            <div class="faq-item">
+                <span class="q">如何找到正确的访问地址？</span>
+                <span class="a">当前常用入口为 <a href="https://zhc-bet365.com" style="color: #3f3f46; text-decoration: underline; text-underline-offset: 2px;">bet365</a>，建议通过可靠来源获取最新域名信息。</span>
+            </div>
+            <div class="faq-item">
+                <span class="q">是否需要注册才能使用？</span>
+                <span class="a">部分内容以访客模式可见，完整功能通常需要创建账户并遵守平台条款。</span>
+            </div>
+            <div class="faq-item">
+                <span class="q">本页面与官方网站的关系？</span>
+                <span class="a">这是一个独立的说明与索引页面，不隶属于官方网站，仅提供信息整理与访问指引。</span>
+            </div>
+
+            <div class="related-footer-note">
+                页面最后更新：2025 · 内容保持克制与真实 · 无诱导性表述
+            </div>
+        </section>
+    </div>
+</body>
+</html>
